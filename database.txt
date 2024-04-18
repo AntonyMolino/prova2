@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS organizzare;
+
+USE organizzare;
+
+CREATE TABLE IF NOT EXISTS utenti (
+    id_utente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    cognome VARCHAR(50),
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(50),
+    tipo ENUM('admin', 'organizzazione', 'persona')
+);
